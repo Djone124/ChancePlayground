@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+    <h1 style="text-indent: 5%">Probability Management Networks</h1>
+    <table>
+        <tr>
+            <td><div id="cdf_div" style=" width: 400px; height: 300px; border: 1px solid #ccc"></div></td>
+            <td><div id="pdf_div" style=" width: 400px; height: 300px; border: 1px solid #ccc"></div></td>
+          </tr>
+    </table>
+    
+    
+    <table>
+        <tr>
+            
+            <td>
+                <h2>SPT Metalog Quantile Specification </h2>
+                <p>If you don't have a value for the lower bound or upper bound, leave blank.</p>
+
+                <label for="quantileSelect">Quantile Select (%):</label>
+                <input type="number" id="quantileSelect" name="quantileSelect" min="0" max="50" step="2.5" value="5">%<br><br>
+                <label for="p0">Lower Bound:</label>
+                <input type="text" id="p0" name="p0"><br><br>
+                <label for="p5" id="p5Label">5% Quantile:</label>
+                <input type="text" id="p5" name="p5" value="1" ><br><br>
+                <label for="p50">50% Quantile:</label>
+                <input type="text" id="p50" name="p50" value="2"><br><br>
+                <label for="p95" id="p95Label">95% Quantile:</label>
+                <input type="text" id="p95" name="p95" value="3"><br><br>
+                <label for="p100">Upper Bound:</label>
+                <input type="text" id="p100" name="p100" ><br><br><br>
+                
+                <div id="randomCellInput">
+                    <label for="randRef">Add a cell reference for Random Number </label>
+                    <input type="text" id="randRef" value="A1"><br><br>
+                </div>
+
+                <input type="button" id="hdr" value="Use HDR">
+                
+                <div id="advancedHdr">
+                    <br><label for="varid">Variable id:</label>
+                    <input type="text" id="varid" name="varid" /><br><br>
+                    <label for="entity">Entity id:</label>
+                    <input type="text" id="entity" name="entity" />
+                </div>
+
+                <br><br>
+                <select name="generate-type" id="generate-type">
+                    <option value="excel">Excel</option>
+                    <option value="python">Python (3.0+)</option>
+                    <option value="R">R</option>
+                </select>
+                
+                <br><br>
+                
+                <textarea rows="15" cols="60" id="excel-placeholder" name="excel-placeholder"></textarea><input type="button" id="clear" value="Clear" style="position: right;"><br><br>
+                
+        </td>
+        <td style="max-width:500px">
+            <table style="padding-left:10px">
+                <tr>
+                    <td>
+                        <a class="image" href="https://www.probabilitymanagement.org/">
+                            <img src="PM Logo.png" style="width:100px;height:100px;vertical-align: middle;"></a>
+                    </td>
+                    <td style="padding-left:25px">
+                        <h3>The Open SIPMath Standard for Communicating Uncertainty</h3>
+                        <a class="image" href="https://www.probabilitymanagement.org/"><p>probabilitymanagement.org</p></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="http://metalogs.org/">
+                            <img src="Metalog Logo.png" style="width:100px;height:100px;vertical-align: middle;"></a>
+                    </td>
+                    <td style="padding-left:25px">
+                        <h3>Metalog Distributions for Capturing Uncertainty from Data with Ease.</h3>
+                        <a class="text" href="http://metalogs.org/"><p>metalogs.org/</p></a>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <a href="https://hubbardresearch.com/">
+                            <img src="HDR Logo.png" style="width:100px;height:100px;vertical-align: middle;"></a>
+                    </td>
+                    <td style="padding-left:25px">
+                        <h3>HDR Generators: for Ensuring Analytical Coherence.</h3>
+                        <a class="text" href="https://hubbardresearch.com/"><p>hubbardresearch.com</p></a>
+                    </td>
+                </tr>
+            
+            </table>
+        </td>
+    </tr>
+    </table>
+
+</body>
+</html>
